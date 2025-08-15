@@ -21,7 +21,28 @@ O projeto foi desenvolvido com foco em **boas práticas de programação orienta
 ---
 ## Imagens do Projeto
 
-![Menu Inicial](https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/menu%20inicial.png))
+![Menu Inicial](https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/menu%20inicial.png)
+
+### Menu 1 - Criar Conta
+
+<img src="https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/1%20-%20criar%20conta.png" alt="CriarConta" width="700"/>
+
+### Menu 2 - Criar Investimento
+<img src="https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/2%20criar%20um%20investimento.png" alt="CrairInvestimento" width="700"/>
+
+### Menu 4 - Deposito
+<img src="https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/4-deposito.png" alt="CrairInvestimento" width="700"/>
+
+### Menu 9 - Listar Contas
+<img src="https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/9%20listar%20contas.png" alt="CrairInvestimento" width="700"/>
+
+### Menu 11 - Listar Carteiras de Investimento
+<img src="https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/11%20listar%20carteira%20de%20investimento.png" alt="CrairInvestimento" width="700"/>
+
+### Menu 13 - Historico da Conta
+<img src="https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/13%20historico%20da%20conta.png" alt="CrairInvestimento" width="700"/>
+
+
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -38,7 +59,7 @@ O projeto foi desenvolvido com foco em **boas práticas de programação orienta
 
 ## 📂 Estrutura do Projeto
 
-
+![Estrutura do Projeto](https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/estruturado%20projeto.png))
 
 
 
