@@ -19,6 +19,9 @@ O projeto foi desenvolvido com foco em **boas práticas de programação orienta
     - `NotFundsEnoughException`
 
 ---
+## Imagens do Projeto
+
+![Menu Inicial](https://github.com/Evertonferrg/DIO_desafio_SistemaBancarioBasico/blob/main/src/img/menu%20inicial.png))
 
 ## 🛠️ Tecnologias Utilizadas
 
