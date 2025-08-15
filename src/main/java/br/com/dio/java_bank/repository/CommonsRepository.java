@@ -19,13 +19,13 @@ import static lombok.AccessLevel.PRIVATE;
 public class CommonsRepository {
 
     public static void checkFundsForTransaction(final Wallet source, final long amount){
-        if (source.getFounds() < amount){
+        if (source.getFunds() < amount){
             throw new NotFundsEnoughException("Seu saldo é insuficiente");
         }
     }
 
-    public static List<Money>generateMoney(final UUID transactionId, final long funds, final String description) {
+    public static List<Money> generateMoney(final UUID transactionId, final long funds, final String description) {
         var history = new MoneyAudit(transactionId, ACCOUNT, description, OffsetDateTime.now());
-        return Stream.generate(() -> new Money(history)).limit(funds).toList();
+        return List.of(new Money(funds, history));
     }
 }

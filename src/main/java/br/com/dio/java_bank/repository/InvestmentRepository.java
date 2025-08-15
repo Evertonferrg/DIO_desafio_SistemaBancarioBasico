@@ -12,9 +12,9 @@ import java.util.List;
 
 import static br.com.dio.java_bank.repository.CommonsRepository.checkFundsForTransaction;
 
-public class InvestimentRepository {
+public class InvestmentRepository {
 
-    private long nestId;
+    private long nestId = 0;
     private final List<Investment> investments = new ArrayList<>();
     private final List<InvestimentWallet> wallets = new ArrayList<>();
 
@@ -26,12 +26,12 @@ public class InvestimentRepository {
     }
 
     public InvestimentWallet initInvestment(final AccountWallet account, final long id){
-        var accountsInUse = wallets.stream().map(InvestimentWallet::getAccount).toList();
-        if (accountsInUse.contains(account)){
-            throw new AccountWithInvestmentException(("A conta " + account + " ja possue um investimento"));
+        if (!wallets.isEmpty()) {
+            var accountsInUse = wallets.stream().map(InvestimentWallet::getAccount).toList();
+            if (accountsInUse.contains(account)) {
+                throw new AccountWithInvestmentException(("A conta " + account + " ja possue um investimento"));
+            }
         }
-
-
         var investment = findById(id);
         checkFundsForTransaction(account, investment.initialFunds());
         var wallet = new InvestimentWallet(investment, account, investment.initialFunds());
@@ -56,8 +56,8 @@ public class InvestimentRepository {
         return wallet;
     }
 
-    public void updateAmount(final long percent){
-        wallets.forEach(w -> w.updateAmount(percent));
+    public void updateAmount(){
+        wallets.forEach(w -> w.updateAmount(w.getInvestment().tax()));
     }
 
     public Investment findById(final long id) {

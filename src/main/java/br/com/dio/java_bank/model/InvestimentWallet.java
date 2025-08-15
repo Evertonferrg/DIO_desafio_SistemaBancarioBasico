@@ -24,11 +24,13 @@ public class InvestimentWallet extends Wallet{
         addMoney(account.reduceMoney(amount), getService(), "investimento");
     }
 
-    public void updateAmount(final long percent){
-        var amount = getFounds() * percent / 100;
-        var history = new MoneyAudit(UUID.randomUUID(),getService(),"rendimentos", OffsetDateTime.now());
-        var money = Stream.generate(() -> new Money(history)).limit(amount).toList();
-        this.money.addAll(money);
+    public void updateAmount(final long percent) {
+        long amount = getFunds() * percent / 100;
+        if (amount <= 0) return;
+        var history = new MoneyAudit(UUID.randomUUID(), getService(), "rendimentos", OffsetDateTime.now());
+        this.money.add(new Money(amount, history));
     }
+
+
 
 }
